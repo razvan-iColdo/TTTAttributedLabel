@@ -365,6 +365,9 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     if ([self respondsToSelector:@selector(invalidateIntrinsicContentSize)]) {
         [self invalidateIntrinsicContentSize];
     }
+    
+    self.activeLink = nil;
+    self.linkModels = [NSArray array];
 
     [super setText:[self.attributedText string]];
 }
